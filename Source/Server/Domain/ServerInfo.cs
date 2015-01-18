@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace WinTop.Domain
 {
-    class ServerInfo
+    public class ServerInfo
     {
+        public ProcessInfo ProcessInfo { get; set; }
+        public TaskInfo TaskInfo { get; set; }
+        public CpuInfo CpuInfo { get; set; }
+        public RamInfo RamInfo { get; set; }
+        public SwapInfo SwapInfo { get; set; }
     }
 }

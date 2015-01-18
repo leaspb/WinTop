@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinTop.Domain
 {
-    class ProcessInfo
+    public class ProcessInfo
     {
     }
 }

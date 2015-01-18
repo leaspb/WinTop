@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WinTop.Server")]
+[assembly: AssemblyTitle("WinTop.InfoProvider")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WinTop.Server")]
+[assembly: AssemblyProduct("WinTop.InfoProvider")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fc17c430-2a50-491c-908c-6b4fe582b743")]
+[assembly: Guid("ba5c2ea4-4cf3-4c77-8185-eb4729e182a1")]
 
 // Version information for an assembly consists of the following four values:
 //
