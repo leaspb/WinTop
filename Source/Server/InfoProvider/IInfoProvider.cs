@@ -2,7 +2,7 @@
 
 namespace WinTop.InfoProvider
 {
-    interface IInfoProvider
+    public interface IInfoProvider
     {
         ServerInfo GetServerInfo();
     }

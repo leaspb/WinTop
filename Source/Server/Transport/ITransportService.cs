@@ -4,7 +4,7 @@ using WinTop.Domain;
 
 namespace WinTop.Transport
 {
-    interface ITransportService
+    public interface ITransportService
     {
         void Start();
         void Stop();

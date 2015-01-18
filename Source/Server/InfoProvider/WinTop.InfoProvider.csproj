@@ -43,7 +43,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Domain\WinTop.Domain.csproj">
+    <ProjectReference Include="..\Domain\WinTop.Domain.csproj">
       <Project>{45d573fc-a9c8-484c-9894-a9c6b5f2469b}</Project>
       <Name>WinTop.Domain</Name>
     </ProjectReference>
