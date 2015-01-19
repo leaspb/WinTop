@@ -9,8 +9,8 @@ namespace WinTop.Transport
         void Start();
         void Stop();
 
-        void SendServerInfo(ServerInfo serverInfo);
-        void SendHighloadMessage(string message);
+        void BroadcastServerInfo(ServerInfo serverInfo);
+        void BroadcastHighloadMessage(string message);
 
         event EventHandler OnGetServerInfo;
         event EventHandler<RefreshIntervalEventArgs> OnSetRefreshInterval;

@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5FF5EF4E-303F-4284-B08B-795F52C9A1AA}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{3981EC51-A559-4F16-A04C-E222D012DE0A}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WinTop.Server</RootNamespace>
-    <AssemblyName>WinTop.Server</AssemblyName>
+    <RootNamespace>WinTop.InfoAnalyzer</RootNamespace>
+    <AssemblyName>WinTop.InfoAnalyzer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,12 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="StructureMap">
-      <HintPath>..\..\packages\structuremap.3.1.4.143\lib\net40\StructureMap.dll</HintPath>
-    </Reference>
-    <Reference Include="StructureMap.Net4">
-      <HintPath>..\..\packages\structuremap.3.1.4.143\lib\net40\StructureMap.Net4.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,31 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppEngine\AppEngine.cs" />
-    <Compile Include="AppEngine\IAppEngine.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="IInfoAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\WinTop.Domain.csproj">
       <Project>{45d573fc-a9c8-484c-9894-a9c6b5f2469b}</Project>
       <Name>WinTop.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\InfoAnalyzer\WinTop.InfoAnalyzer.csproj">
-      <Project>{3981ec51-a559-4f16-a04c-e222d012de0a}</Project>
-      <Name>WinTop.InfoAnalyzer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\InfoProvider\WinTop.InfoProvider.csproj">
-      <Project>{0868071d-3541-452b-9781-134e12ff4189}</Project>
-      <Name>WinTop.InfoProvider</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Transport\WinTop.Transport.csproj">
-      <Project>{f850edb1-a261-4c7e-b6d6-1cd505355bbd}</Project>
-      <Name>WinTop.Transport</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

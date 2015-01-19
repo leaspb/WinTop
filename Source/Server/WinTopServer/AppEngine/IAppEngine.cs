@@ -3,5 +3,6 @@
     public interface IAppEngine
     {
         void Run();
+        void Stop();
     }
 }
