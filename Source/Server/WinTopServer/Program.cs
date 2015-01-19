@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 using StructureMap;
 
+using WinTop.InfoAnalyzer;
+using WinTop.InfoAnalyzer.Hardware;
 using WinTop.InfoProvider;
+using WinTop.InfoProvider.Wmi;
 using WinTop.Transport;
+using WinTop.Transport.WebSocket;
 
 namespace WinTop.Server
 {
@@ -19,6 +23,17 @@ namespace WinTop.Server
 
             IAppEngine appEngine = container.GetInstance<IAppEngine>();
             appEngine.Run();
+
+            Console.WriteLine("The server started successfully, press key 'q' to stop it!");
+
+            while (Console.ReadKey().KeyChar != 'q')
+            {
+                continue;
+            }
+
+            appEngine.Stop();
+
+            Console.WriteLine("The server was stopped!");
         }
 
         private static IContainer ConfigureDependencies()
@@ -26,8 +41,9 @@ namespace WinTop.Server
             return new Container(x =>
             {
                 x.For<IAppEngine>().Use<AppEngine>();
-                x.For<IInfoProvider>().Use<IInfoProvider>();
-                x.For<ITransportService>().Use<ITransportService>();
+                x.For<IInfoProvider>().Use<WmiInfoProvider>();
+                x.For<IInfoAnalyzer>().Use<HardwareInfoAnalyzer>();
+                x.For<ITransportService>().Use<WebSocketService>();
             });
         }
     }
